@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Contact Us | Minicimex",
     description:
       "Get in touch with us for training inquiries, development projects, or product information.",
-    url: "https://Minicimex-solutions.com/contact/",
+    url: "https://minicimex.com/contact/",
   },
 };
 
@@ -30,7 +30,7 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     description: "We'll respond within 24 hours",
-    value: "contact@Minicimex-solutions.com",
+    value: "minicimextech@gmail.com",
   },
   {
     icon: Clock,

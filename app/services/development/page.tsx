@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Custom Software Development | Minicimex",
     description:
       "End-to-end custom web and mobile app development services. Scalable, secure, and high-performance applications.",
-    url: "https://Minicimex-solutions.com/services/development/",
+    url: "https://minicimex.com/services/development/",
   },
 };
 
@@ -49,7 +49,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Minicimex",
-    sameAs: "https://Minicimex-solutions.com",
+    sameAs: "https://minicimex.com",
   },
   areaServed: "Global",
   hasOfferCatalog: {

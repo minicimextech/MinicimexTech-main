@@ -30,26 +30,30 @@
 
     /* ─── Corporate Design Tokens ─── */
     /* Navy-and-white palette with deep cobalt accent */
-    --color-navy:        #0D1B3E;   /* deep navy — primary brand */
-    --color-cobalt:      #1F4FD8;   /* cobalt blue — accent / CTA */
-    --color-cobalt-dark: #1843B8;   /* hover state */
-    --color-white:       #FFFFFF;
-    --color-grey-50:     #F7F8FA;   /* alternating section bg */
-    --color-grey-100:    #EFF1F5;
-    --color-grey-400:    #94A3B8;
-    --color-grey-600:    #4B5563;
-    --color-grey-800:    #1F2937;
+    --color-navy: #0D1B3E;
+    /* deep navy — primary brand */
+    --color-cobalt: #1F4FD8;
+    /* cobalt blue — accent / CTA */
+    --color-cobalt-dark: #1843B8;
+    /* hover state */
+    --color-white: #FFFFFF;
+    --color-grey-50: #F7F8FA;
+    /* alternating section bg */
+    --color-grey-100: #EFF1F5;
+    --color-grey-400: #94A3B8;
+    --color-grey-600: #4B5563;
+    --color-grey-800: #1F2937;
 
     /* Semantic aliases */
-    --color-primary:       var(--color-navy);
-    --color-accent:        var(--color-cobalt);
-    --color-background:    var(--color-white);
-    --color-section-bg:    var(--color-grey-50);
-    --color-text-primary:  var(--color-grey-800);
-    --color-text-secondary:var(--color-grey-600);
-    --color-overline:      var(--color-cobalt);
+    --color-primary: var(--color-navy);
+    --color-accent: var(--color-cobalt);
+    --color-background: var(--color-white);
+    --color-section-bg: var(--color-grey-50);
+    --color-text-primary: var(--color-grey-800);
+    --color-text-secondary: var(--color-grey-600);
+    --color-overline: var(--color-cobalt);
     --color-success: #10B981;
-    --color-error:   #EF4444;
+    --color-error: #EF4444;
   }
 
   .dark {
@@ -73,15 +77,15 @@
     --input: 217 32% 17%;
     --ring: 224 75% 60%;
 
-    --color-primary:        #3B6EF5;
-    --color-accent:         #5A80FF;
-    --color-background:     #0B1023;
-    --color-section-bg:     #111827;
-    --color-text-primary:   #F1F5F9;
+    --color-primary: #3B6EF5;
+    --color-accent: #5A80FF;
+    --color-background: #0B1023;
+    --color-section-bg: #111827;
+    --color-text-primary: #F1F5F9;
     --color-text-secondary: #94A3B8;
-    --color-overline:       #5A80FF;
+    --color-overline: #5A80FF;
     --color-success: #34D399;
-    --color-error:   #F87171;
+    --color-error: #F87171;
   }
 }
 
@@ -89,12 +93,14 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 400;
     line-height: 1.7;
   }
+
   html {
     scroll-behavior: smooth;
   }
@@ -104,6 +110,7 @@
    Typography System
 ───────────────────────────────────────── */
 @layer utilities {
+
   /* Display / Hero headings → Jost */
   .font-display {
     font-family: 'Jost', 'Inter', sans-serif;
@@ -112,7 +119,8 @@
   /* All-caps overline label */
   .overline {
     font-family: 'Inter', sans-serif;
-    font-size: 0.6875rem;      /* 11px */
+    font-size: 0.6875rem;
+    /* 11px */
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -136,6 +144,7 @@
     cursor: pointer;
     white-space: nowrap;
   }
+
   .btn-primary:hover {
     background-color: var(--color-cobalt-dark, #1843B8);
     box-shadow: 0 4px 18px rgba(31, 79, 216, 0.28);
@@ -158,6 +167,7 @@
     cursor: pointer;
     white-space: nowrap;
   }
+
   .btn-ghost:hover {
     background-color: var(--color-navy);
     color: #fff;
@@ -171,6 +181,7 @@
     padding: 2rem;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
   }
+
   .corp-card:hover {
     box-shadow: 0 12px 40px rgba(13, 27, 62, 0.1);
     transform: translateY(-3px);
@@ -186,8 +197,9 @@
 
   /* Legacy gradient helpers kept for component backward-compat */
   .gradient-primary {
-    background: var(--color-navy);
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-cobalt) 100%);
   }
+
   .gradient-text {
     color: var(--color-cobalt);
     background: none;

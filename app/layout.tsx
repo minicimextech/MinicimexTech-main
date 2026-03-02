@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Minicimex" }],
   creator: "Minicimex",
-  metadataBase: new URL("https://Minicimex-solutions.com"),
+  metadataBase: new URL("https://minicimex.com"),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://Minicimex-solutions.com",
+    url: "https://minicimex.com",
     siteName: "Minicimex",
     title: "Minicimex | Building the Future Through Technology",
     description:

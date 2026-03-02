@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Our Services | Minicimex",
     description:
       "Explore our comprehensive services: Technical Training, Custom Software Development, and In-House Products.",
-    url: "https://Minicimex-solutions.com/services/",
+    url: "https://minicimex.com/services/",
   },
 };
 

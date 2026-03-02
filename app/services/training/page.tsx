@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Technical Training Programs | Minicimex",
     description:
       "Professional technical training with hands-on projects and certification. Web development, mobile apps, programming, cloud, and more.",
-    url: "https://Minicimex-solutions.com/services/training/",
+    url: "https://minicimex.com/services/training/",
   },
 };
 
@@ -61,7 +61,7 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Minicimex",
-    sameAs: "https://Minicimex-solutions.com",
+    sameAs: "https://minicimex.com",
   },
   hasCourseInstance: [
     {

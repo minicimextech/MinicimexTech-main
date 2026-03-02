@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Minicimex" }],
   creator: "Minicimex",
-  metadataBase: new URL("https://Minicimex-solutions.com"),
+  metadataBase: new URL("https://minicimex.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://Minicimex-solutions.com",
+    url: "https://minicimex.com",
     siteName: "Minicimex",
     title: "Minicimex | Building the Future Through Technology",
     description:
@@ -50,8 +50,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Minicimex",
-  url: "https://Minicimex-solutions.com",
-  logo: "https://Minicimex-solutions.com/logo.png",
+  url: "https://minicimex.com",
+  logo: "https://minicimex.com/logo.png",
   description:
     "Building the future through technology, training, and innovation. We offer professional technical training, custom software development services, and innovative in-house products.",
   address: {
@@ -61,7 +61,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    email: "contact@Minicimex-solutions.com",
+    email: "minicimextech@gmail.com",
   },
   sameAs: [
     "https://twitter.com/Minicimex",

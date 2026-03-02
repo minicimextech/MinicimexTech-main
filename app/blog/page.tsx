@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog | Minicimex",
     description: "Stay updated with the latest insights and tutorials.",
-    url: "https://Minicimex-solutions.com/blog/",
+    url: "https://minicimex.com/blog/",
   },
 };
 
