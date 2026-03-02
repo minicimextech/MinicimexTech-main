@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Shadcn token mapping */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 224 72% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 32% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 214 32% 95%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 72% 42%;
+    --radius: 0.375rem;
+
+    /* ─── Corporate Design Tokens ─── */
+    /* Navy-and-white palette with deep cobalt accent */
+    --color-navy:        #0D1B3E;   /* deep navy — primary brand */
+    --color-cobalt:      #1F4FD8;   /* cobalt blue — accent / CTA */
+    --color-cobalt-dark: #1843B8;   /* hover state */
+    --color-white:       #FFFFFF;
+    --color-grey-50:     #F7F8FA;   /* alternating section bg */
+    --color-grey-100:    #EFF1F5;
+    --color-grey-400:    #94A3B8;
+    --color-grey-600:    #4B5563;
+    --color-grey-800:    #1F2937;
+
+    /* Semantic aliases */
+    --color-primary:       var(--color-navy);
+    --color-accent:        var(--color-cobalt);
+    --color-background:    var(--color-white);
+    --color-section-bg:    var(--color-grey-50);
+    --color-text-primary:  var(--color-grey-800);
+    --color-text-secondary:var(--color-grey-600);
+    --color-overline:      var(--color-cobalt);
+    --color-success: #10B981;
+    --color-error:   #EF4444;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 224 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 32% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 75% 60%;
+
+    --color-primary:        #3B6EF5;
+    --color-accent:         #5A80FF;
+    --color-background:     #0B1023;
+    --color-section-bg:     #111827;
+    --color-text-primary:   #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-overline:       #5A80FF;
+    --color-success: #34D399;
+    --color-error:   #F87171;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─────────────────────────────────────────
+   Typography System
+───────────────────────────────────────── */
+@layer utilities {
+  /* Display / Hero headings → Jost */
+  .font-display {
+    font-family: 'Jost', 'Inter', sans-serif;
+  }
+
+  /* All-caps overline label */
+  .overline {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6875rem;      /* 11px */
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-overline);
+  }
+
+  /* Solid primary CTA button style */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-navy);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 1.5px solid transparent;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-cobalt-dark, #1843B8);
+    box-shadow: 0 4px 18px rgba(31, 79, 216, 0.28);
+  }
+
+  /* Ghost / outline secondary button */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: var(--color-navy);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 1.5px solid var(--color-navy);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-ghost:hover {
+    background-color: var(--color-navy);
+    color: #fff;
+  }
+
+  /* ── Card ── */
+  .corp-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-grey-100);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .corp-card:hover {
+    box-shadow: 0 12px 40px rgba(13, 27, 62, 0.1);
+    transform: translateY(-3px);
+  }
+
+  /* Divider line in muted grey */
+  .section-divider {
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--color-cobalt);
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  /* Legacy gradient helpers kept for component backward-compat */
+  .gradient-primary {
+    background: var(--color-navy);
+  }
+  .gradient-text {
+    color: var(--color-cobalt);
+    background: none;
+    -webkit-text-fill-color: unset;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
